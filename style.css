@@ -1,0 +1,178 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: small;
+	margin: 0px;
+	background: #ffffff;
+	min-height: 100vh;
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+/*-----------------------------------------------------*/
+
+.header {
+	display: flex;
+	flex: 0 1 auto;
+	align-items: center;
+	justify-content: space-around;
+
+	font-size: medium;
+	background-color: #ffffff;
+	height: 10vh;
+	width: 100%;
+
+	order: 1;
+
+}
+
+.header img {
+	margin: 0px;
+}
+
+nav {
+	display: flex;
+	border-bottom: 1px solid #cccccc;
+}
+
+nav a{
+	margin: 0px 5px;
+	padding: 5px 15px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+/*-----------------------------------------------------*/
+
+.main {
+	display: flex;
+	flex: 1 0 auto;
+	flex-flow: column wrap;
+
+	min-width: 100%;
+	/*min-height: /*calc(100vh - 30vh)100vh;*/
+	/*background-color: green;*/
+
+	order: 2;
+}
+
+/*-----------------------------------------------------*/
+
+.templates {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: yellow;
+	background: no-repeat center/cover url(images/templates2.jpg);
+	min-height: 25vh;
+	height: 50vh;
+	width: cover;
+	color: white;
+}
+
+/*-----------------------------------------------------*/
+
+.about {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	width: 80vw;
+	min-width: 10vw;
+	margin: 3vh auto 0 auto;
+	/*background-color: blue;*/
+}
+
+.about h2, .about p, .about button {
+	margin: 1vh 0vh 1vh 0vh;
+	padding: 1vh;
+}
+
+.about button {
+	background-color: #0102cc;
+}
+
+.about button > a:link, .about button > a:visited {
+	color: #ffffff;
+}
+
+/*-----------------------------------------------------*/
+
+.portfolio {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	width: 80vw;
+	margin: 3vh auto 3vh auto;
+	/*background-color: red;*/
+}
+
+/*-----------------------------------------------------*/
+
+.footer {
+	display: flex;
+	flex: 0 1 auto;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	height: 20vh;
+	width: 100%;
+
+	background-color: #000000;
+	color: #ffffff;
+
+	order: 3;
+}
+
+#rightes {
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*-----------------------------------------------------*/
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover, button:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+button {
+	padding: 5px 10px;
+	margin: 0px;
+	border-radius: 3px;
+}
+
+img {
+	margin: 10px 10px;
+}
+
+
+	/*
+	justify-content:	расположение по основной оси
+	align-items:		вытягивание элементов
+	align content:		вытягивание элементов по перпендикулярной оси
+	align-self:			отдельное выравнивание элемента;
+	*/
+
+

@@ -5,7 +5,7 @@ html, body {
 body {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: small;
-	margin: 0px;
+	margin: 0;
 	background: #ffffff;
 	min-height: 100vh;
 
@@ -24,15 +24,12 @@ body {
 
 	font-size: medium;
 	background-color: #ffffff;
-	height: 10vh;
+	height: 100px;
 	width: 100%;
-
-	order: 1;
-
 }
 
 .header img {
-	margin: 0px;
+	margin: 0;
 }
 
 nav {
@@ -40,8 +37,8 @@ nav {
 	border-bottom: 1px solid #cccccc;
 }
 
-nav a{
-	margin: 0px 5px;
+nav a, nav p {
+	margin: 0 5px;
 	padding: 5px 15px;
 	border-radius: 3px;
 	text-decoration: none;
@@ -54,11 +51,7 @@ nav a{
 	flex: 1 0 auto;
 	flex-flow: column wrap;
 
-	min-width: 100%;
-	/*min-height: /*calc(100vh - 30vh)100vh;*/
-	/*background-color: green;*/
-
-	order: 2;
+	width: 100%;
 }
 
 /*-----------------------------------------------------*/
@@ -69,11 +62,11 @@ nav a{
 	justify-content: center;
 	align-items: center;
 
-	background-color: yellow;
 	background: no-repeat center/cover url(images/templates2.jpg);
 	min-height: 25vh;
 	height: 50vh;
-	width: cover;
+	margin-bottom: 100px;
+	width: auto/*cover*/;
 	color: white;
 }
 
@@ -85,23 +78,25 @@ nav a{
 	justify-content: center;
 	align-items: center;
 
-	width: 80vw;
-	min-width: 10vw;
-	margin: 3vh auto 0 auto;
+	width: 768px;
+	min-width: 360px;
+	max-width: 1024px;
+	margin: 0 auto 100px auto;
 	/*background-color: blue;*/
 }
 
 .about h2, .about p, .about button {
-	margin: 1vh 0vh 1vh 0vh;
-	padding: 1vh;
+	margin: 10px 0 10px 0;
+	padding: 10px;
 }
 
 .about button {
 	background-color: #0102cc;
+	color: #ffffff;
 }
 
-.about button > a:link, .about button > a:visited {
-	color: #ffffff;
+.about button:link, .about button:visited {
+	/*color: #ffffff;*/
 }
 
 /*-----------------------------------------------------*/
@@ -113,8 +108,10 @@ nav a{
 	align-items: center;
 	text-align: center;
 
-	width: 80vw;
-	margin: 3vh auto 3vh auto;
+	width: 768px;
+	min-width: 360px;
+	max-width: 1024px;
+	margin: 0px auto 100px auto;
 	/*background-color: red;*/
 }
 
@@ -123,26 +120,34 @@ nav a{
 .footer {
 	display: flex;
 	flex: 0 1 auto;
-	flex-flow: row wrap;
-	justify-content: center;
+	flex-flow: column wrap;
+	justify-content: space-between;
 	align-items: center;
 	text-align: center;
 
-	height: 20vh;
+	height: 100px;
 	width: 100%;
+	padding: 25px 0 0 0;
 
+	/*background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left;*/
 	background-color: #000000;
 	color: #ffffff;
-
-	order: 3;
 }
 
-#rightes {
-	position: sticky;
-	top: 0;
+/*#rights {
+	/*position: sticky; - поменять на правильную позицию*/
+	/*top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+}*/
+
+.footer img {
+	margin: -5px;
+	padding: 10px;
 }
 
 /*-----------------------------------------------------*/
@@ -159,7 +164,7 @@ a:hover, button:hover {
 
 button {
 	padding: 5px 10px;
-	margin: 0px;
+	margin: 0;
 	border-radius: 3px;
 }
 
@@ -169,6 +174,13 @@ img {
 
 
 	/*
+
+
+	1) change footer element using css styles only
+
+
+
+
 	justify-content:	расположение по основной оси
 	align-items:		вытягивание элементов
 	align content:		вытягивание элементов по перпендикулярной оси

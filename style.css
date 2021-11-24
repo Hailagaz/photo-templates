@@ -1,17 +1,17 @@
 html, body {
 	height: 100%;
+	/*width: 100%;*/
 }
 
 body {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: small;
 	margin: 0;
-	background: #ffffff;
+	background-color: #ffffff;
 	min-height: 100vh;
+	min-width: 100%;
 
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
+	position: absolute; /*решает проблему не 100%-й ширины на моб. телефонах*/
 }
 
 /*-----------------------------------------------------*/
@@ -19,9 +19,9 @@ body {
 .header {
 	display: flex;
 	flex: 0 1 auto;
+	flex-flow: row wrap;
 	align-items: center;
-	justify-content: space-around;
-
+	justify-content: space-between;
 	font-size: medium;
 	background-color: #ffffff;
 	height: 100px;
@@ -29,19 +29,23 @@ body {
 }
 
 .header img {
-	margin: 0;
+	margin: 0 auto 0 50px;
 }
 
-nav {
+.header nav {
 	display: flex;
-	border-bottom: 1px solid #cccccc;
+	margin-right: 0 50px 0 auto;
 }
 
-nav a, nav p {
+nav a {
 	margin: 0 5px;
 	padding: 5px 15px;
 	border-radius: 3px;
 	text-decoration: none;
+}
+
+#last {
+	margin-right: 50px;
 }
 
 /*-----------------------------------------------------*/
@@ -54,6 +58,11 @@ nav a, nav p {
 	width: 100%;
 }
 
+section {
+	background-color: grey;
+	max-width: 1024px;
+	margin: 0 auto;
+}
 /*-----------------------------------------------------*/
 
 .templates {
@@ -62,12 +71,23 @@ nav a, nav p {
 	justify-content: center;
 	align-items: center;
 
-	background: no-repeat center/cover url(images/templates2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url(images/templates2.jpg);
+
 	min-height: 25vh;
 	height: 50vh;
 	margin-bottom: 100px;
-	width: auto/*cover*/;
-	color: white;
+	width: auto;
+}
+
+.templates h1 {
+	color: #ffffff;
+}
+
+.templates > .btn {
+	box-shadow: 2px 2px royalblue;
 }
 
 /*-----------------------------------------------------*/
@@ -78,27 +98,25 @@ nav a, nav p {
 	justify-content: center;
 	align-items: center;
 
-	width: 768px;
+	width: 100%;
 	min-width: 360px;
-	max-width: 1024px;
 	margin: 0 auto 100px auto;
-	/*background-color: blue;*/
 }
 
-.about h2, .about p, .about button {
+.about h2, .about p, .about a {
 	margin: 10px 0 10px 0;
 	padding: 10px;
 }
 
-.about button {
-	background-color: #0102cc;
-	color: #ffffff;
+.about img {
+	box-shadow: 5px 5px purple;
+	width: 100%;
+	margin: 50px 50px;
 }
 
-.about button:link, .about button:visited {
-	/*color: #ffffff;*/
+.about > .btn {
+	background-color: blue;
 }
-
 /*-----------------------------------------------------*/
 
 .portfolio {
@@ -108,11 +126,9 @@ nav a, nav p {
 	align-items: center;
 	text-align: center;
 
-	width: 768px;
+	width: 100%;
 	min-width: 360px;
-	max-width: 1024px;
 	margin: 0px auto 100px auto;
-	/*background-color: red;*/
 }
 
 /*-----------------------------------------------------*/
@@ -125,62 +141,57 @@ nav a, nav p {
 	align-items: center;
 	text-align: center;
 
-	height: 100px;
-	width: 100%;
-	padding: 25px 0 0 0;
+	min-width: 100%;
+	/*width: 100%;*/
+	padding: 20px 0 20px 0;
 
-	/*background-image: url(images/logo.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: left;*/
 	background-color: #000000;
 	color: #ffffff;
 }
-
-/*#rights {
-	/*position: sticky; - поменять на правильную позицию*/
-	/*top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}*/
 
 .footer img {
 	margin: -5px;
 	padding: 10px;
 }
 
-/*-----------------------------------------------------*/
-
-a:link, a:visited {
-	text-decoration: none;
-	color: #000000;
+.testFooter1, .testFooter2 {
+	min-width: 100vw;
 }
 
-a:hover, button:hover {
+/*-----------------------------------------------------*/
+
+a:link, a:visited, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
 	color: #ffffff;
 	background-color: #000000;
 }
 
-button {
+.btn {
 	padding: 5px 10px;
 	margin: 0;
-	border-radius: 3px;
+	border: solid 1px;
+	box-shadow: 2px 2px darkblue;
+	background-color: #ffffff;
 }
+
+
+
 
 img {
 	margin: 10px 10px;
 }
 
 
+
+
 	/*
-
-
 	1) change footer element using css styles only
 
-
-
-
+	-----
 	justify-content:	расположение по основной оси
 	align-items:		вытягивание элементов
 	align content:		вытягивание элементов по перпендикулярной оси
